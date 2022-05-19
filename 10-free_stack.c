@@ -1,9 +1,10 @@
 #include "monty.h"
 
 /**
+ * free_stack - free elements of the stack
+ * @stack: doble pointer to head
  *
- *
- *
+ * Return: none
  */
 
 void free_stack(stack_t **stack)
@@ -23,6 +24,6 @@ void free_stack(stack_t **stack)
 		}
 		*stack = (*stack)->next;
 		(*stack)->prev = NULL;
-		free (tmp);
+		free(tmp);
 	}
 }

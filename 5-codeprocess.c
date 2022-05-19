@@ -3,12 +3,21 @@
 char *number;
 
 /**
+ * codeprocess - check the num args for line, seching some error
+ * @command: doble pointer of the string in getline
+ * @buffer: pointer staorage the getline
+ * @list: struct of the doble linked list
+ * @line: current line in of execute the file
+ * @montyFile: File
  *
- *
- *
+ * Return: none
  */
 
-void codeprocess(char **command, char *buffer, int line, stack_t **list, FILE *montyFile)
+void codeprocess(char **command,
+		 char *buffer,
+		 int line,
+		 stack_t **list,
+		 FILE *montyFile)
 {
 	int j = 0;
 	instruction_t opcodeFunc[] = {

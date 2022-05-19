@@ -3,9 +3,10 @@
 char *number;
 
 /**
+ * checkfile - get the information of the document
+ * @myfile: pointer save the name file
  *
- *
- *
+ * Return: none
  */
 
 void checkfile(char *myfile)

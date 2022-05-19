@@ -3,12 +3,21 @@
 char *number;
 
 /**
+ * num_args - check the num args for line, seching some error
+ * @command: doble pointer of the string in getline
+ * @buffer: pointer staorage the getline
+ * @list: struct of the doble linked list
+ * @line: current line in of execute the file
+ * @montyFile: File
  *
- *
- *
+ * Return: none
  */
 
-void num_args(char **command, char *buffer, stack_t **list, int line, FILE *montyFile)
+void num_args(char **command,
+	      char *buffer,
+	      stack_t **list,
+	      int line,
+	      FILE *montyFile)
 {
 	int i = 0;
 

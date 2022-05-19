@@ -1,9 +1,11 @@
 #include "monty.h"
 
 /**
+ * do_pint - The opcode pint prints the value at the top of the stack
+ * @stack: struct of doubly linked list
+ * @line_number: line number currently in the file
  *
- *
- *
+ * Return: void
  */
 
 void do_pint(stack_t **stack, unsigned int line_number)

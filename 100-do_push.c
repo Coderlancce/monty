@@ -1,8 +1,11 @@
 #include "monty.h"
 
 /**
+ * do_push - The opcode push pushes an element to the stack
+ * @stack: doubly linked list representation of a stack (or queue)
+ * @line_number: currently line number in the file
  *
- *
+ * Return: none
  */
 
 void do_push(stack_t **stack, unsigned int line_number)

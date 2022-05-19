@@ -1,8 +1,11 @@
 #include "monty.h"
 
 /**
+ * do_pall - print the value in the nodo
+ * @stack: struct of the doubly linked list
+ * @line_number: number of the line in the file
  *
- *
+ * Return: none
  */
 
 void do_pall(stack_t **stack, unsigned int line_number)

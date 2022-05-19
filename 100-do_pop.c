@@ -1,9 +1,11 @@
 #include "monty.h"
 
 /**
+ * do_pop - The opcode pop removes the top element of the stack
+ * @stack: doubly linked list representation of a stack (or queue)
+ * @line_number: Currently line number in the file
  *
- *
- *
+ * Return: void
  */
 
 void do_pop(stack_t **stack, unsigned int line_number)

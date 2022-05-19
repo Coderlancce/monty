@@ -25,6 +25,12 @@ void do_push(stack_t **stack, unsigned int line_number)
 		}
 	}
 	num = atoi(number);
+	if (num == 0)
+	{
+		fprintf(stderr, "L%d: usage: push integer\n", line_number);
+		free_stack(stack);
+		exit(EXIT_FAILURE);
+	}
 	new = malloc(sizeof(stack_t));
 	if (new == NULL)
 	{

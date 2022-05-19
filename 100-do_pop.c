@@ -22,9 +22,11 @@ void do_pop(stack_t **stack, unsigned int line_number)
 	{
 		free(tmp);
 		*stack = NULL;
-		return;
 	}
-	*stack = (*stack)->next;
-	(*stack)->prev = NULL;
-	free(tmp);
+	else
+	{
+		*stack = (*stack)->next;
+		(*stack)->prev = NULL;
+		free(tmp);
+	}
 }

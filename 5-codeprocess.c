@@ -28,6 +28,7 @@ void codeprocess(char **command,
 		{"swap", do_swap},
 		{"add", do_add},
 		{"nop", do_nop},
+		{"sub", do_sub},
 		{NULL, NULL},
 	};
 	while (opcodeFunc[j].opcode != NULL)

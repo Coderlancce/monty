@@ -13,12 +13,13 @@
  * Return: exit with EXIT_FAILURE
  * On error: nohting
  */
+
 void error(char *str, int shouldFree, int closeFile)
 {
-  dprintf(2, "%s\n", str);
-  if (shouldFree)
-    free(str);
-  if (closeFile)
-    fclose(pack.fdcode);
-  exit(EXIT_FAILURE);
+	dprintf(2, "%s\n", str);
+	if (shouldFree)
+		free(str);
+	if (closeFile)
+		fclose(pack.fdcode);
+	exit(EXIT_FAILURE);
 }

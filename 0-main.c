@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
 	}
 	pack.fdcode = montyfd;
 
-	while (EOF != getline(&pack.cmd, &buffSize, montyfd))
+	while (-1 != getline(&pack.cmd, &buffSize, montyfd))
 		built_in(&head), pack.n++;
 
 	freeStack(&head);

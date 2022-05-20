@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * div - The opcode div divide the top two elements of the stack.
+ * divs - The opcode div divide the top two elements of the stack.
  * it simply divide the nodes, store the result on one node,
  * the other one is set to zero, and calls the "add" command function
  * @stack: stack where this function will operate
@@ -13,7 +13,7 @@
  * with EXIT_FAILURE
  */
 
-void div(stack_t **stack, unsigned int line_number)
+void divs(stack_t **stack, unsigned int line_number)
 {
 	stack_t *current = *stack;
 	char *msg;

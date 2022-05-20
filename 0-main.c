@@ -10,16 +10,29 @@
 
 int main(int argc, char *argv[])
 {
-	char *myfile;
+	FILE *montyfd;
+	size_t buffSize = 0;
+	stack_t *head = NULL;
 
-	if (argc != 2)
+	pack.cmd = NULL, pack.n = 1, pack.mode = 0;
+
+	if (argc != 2 || argv == NULL)
+		error("USAGE: monty file", 0, 0);
+
+	montyfd = fopen(argv[1], "r");
+	if (!montyfd)
 	{
-		write(2, "USAGE: monty file\n", 18);
-		exit(EXIT_FAILURE);
+		dprintf(2, "Error: Can't open file %s", argv[1]);
+		error("", 0, 0);
 	}
+	pack.fdcode = montyfd;
 
-	myfile = argv[1];
-	checkfile(myfile);
+	while (EOF != getline(&pack.cmd, &buffSize, montyfd))
+		built_in(&head), pack.n++;
 
-	return (0);
+	freeStack(&head);
+	free(pack.cmd);
+	fclose(montyfd);
+
+	return (EXIT_SUCCESS);
 }

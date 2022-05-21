@@ -18,6 +18,7 @@ void built_in(stack_t **head)
 		{"div", divs}, {"mul", mul},
 		{"mod", mod}, {"pchar", pchar},
 		{"pstr", pstr}, {"rotl", rotl},
+		{"rotr", rotr},
 };
 
 	int i = sizeof(ops) / sizeof(ops[0]); /* lenght of ops array */
